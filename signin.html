@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HOTSTAR</title>
+        <meta name="viewport" contnet="widht=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="imges/appicon.jpg" type="image/icon type">
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color:black;
+            }
+              img {
+                width:110px;
+                height:70px;
+                text-align:center;
+                border-radius:30%;
+                }
+                .one {
+                border:2rem solid rgb(255, 252, 252);
+                background-color:rgb(245, 241, 241);
+                border-radius:20%;
+                text-align:center;
+                box-shadow:5px 5px 5px 5px rgb(189, 140, 140);
+                width:300px;
+                margin-top:100px;
+            }
+            hr {
+                color:black;
+                border:2px solid black;
+            }
+            h4{
+                color:blue;
+
+            }
+            button {
+                padding:5px 65px ;
+                background-color:blue;
+                color:white;
+                margin:5px;
+            }
+            input {
+                margin:0.5rem;
+                border:2px solid black;
+                text-align:center;
+                color:black;
+            }
+            input:focus {
+                box-shadow:5px 5px black;
+            }
+            .newbutton {
+                background-color: green;
+                margin:20px;
+            }
+        </style>
+        </head>
+        <body>
+            <center>
+            <div class="one">
+                <img src="imges/appicon.jpg">
+                <hr>
+                <h4>SIGNIN</h4>
+                 <input type="text" placeholder="ENTER YOUR PHONENUMBER" /><br>
+                 <input type="text" placeholder="YOUR NAME"/><br>
+                 <button  onclick="showpass()" >SignIN</button><br>
+                 <button onclick="back()" class="newbutton">BACK</button>
+            </div>
+            </center>
+            <script>
+                function showpass() {
+                    alert("UserName:  PA17  \n Password:  1718 \n Please Don't Share");
+                }
+                function back() {
+                    window.location.href="index01.html";
+                }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HOTSTAR</title>
+        <meta name="viewport" contnet="widht=device-width,initial-scale=1.0">
+        <link rel="icon" href="imges/appicon.jpg" type="image/icon type">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color:black;
+            }
+            img {
+                width:110px;
+                height:70px;
+                text-align:center;
+                border-radius:30%;
+            }
+            .one {
+                border:2rem solid white;
+                background-color:white;
+                border-radius:20%;
+                text-align:center;
+                box-shadow:5px 5px 5px 5px rgb(221, 17, 17);
+                width:300px;
+                margin-top:100px;
+            }
+            .two {
+                color:blue;
+                display:block;
+            }
+            h4 {
+                text-align:center;
+            }
+            .three {
+                text-align:center;
+                margin:1rem;
+            }
+            .same {
+                margin:0.5rem;
+                border:2px solid black;
+                text-align:center;
+                color:black;
+            }
+            .same:focus {
+                box-shadow:5px 5px black;
+            }
+            hr {
+                color:black;
+                border:2px solid black;
+            }
+            .loginbutton,.signinbutton {
+                padding:5px 65px ;
+                background-color:blue;
+                color:white;
+            }
+            #memo {
+                color:red;
+                font-size:20px;
+            }
+            </style>
+
+    </head>
+<body>
+    <center>
+        <div class="one">
+            <img class="ico" src="imges/appicon.jpg"><hr>
+               <div class="two">
+                <h4>LOGIN</h4>
+                  <div class="three">
+                     <input type="email" placeholder="USERNAME OR EMAIL" class="same" id="input1" onclick="pcha()" /><br>
+                     <input type="password" placeholder="PASSWORD" class="same" id="pavan"><br>
+                     <input type="checkbox" onclick="showpass()"/><span>Show Password</span><br/>
+                  </div>
+                  <button class="loginbutton" onclick="cheekpass()">LOGIN</button><br>
+                  <p id="memo"></p>
+                  <a href="" onclick="showpassword()">ForgotPassword?</a><br>
+                  <hr>
+                  <p>I Don't Have Any Account</p>
+                  <button class="signinbutton" onclick="signuppage()">SignIN</button>
+               </div>
+        </div>
+    </center>
+    <script>
+        const el = document.querySelectorAll("input")[1];
+        function showpass() {
+         if(el.type === "password"){
+         el.setAttribute("type","text");
+        }
+         else{
+          el.setAttribute("type","password");
+         }
+    }
+     const el1 = document.querySelectorAll("input")[0];
+     const x = document.querySelectorAll("button")[0];
+     const y = document.getElementById("memo");
+     function cheekpass() {
+     if(el1.value == "PA17" && el.value == 1718 ) {
+            window.location.href="home.html";
+     }
+     else if(el1.value != "PA17" && el.value == 1718){
+           y.innerHTML ="Please Entere Correct UserName OR SignIN";
+     }
+     else if(el1.value == "PA17" && el.value != 1718 ){
+         y.innerHTML ="Please Entere Correct Password";
+     }
+     else {
+        y.innerHTML ="Please SignIN";
+     }
+     function pcha() {
+        y.innerHTML =" ";
+     }
+    }
+    function showpassword() {
+        alert("YOUR PASSWORD IS : 1718");
+    }
+    function signuppage() {
+        window.location.href="signin.html";
+    }
+    </script>
+</body>
+    </html>
